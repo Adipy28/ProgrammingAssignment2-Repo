@@ -1,4 +1,4 @@
-
+Working code:
 makeCacheMatrix <- function(x = matrix()) {
 
     inv <- NULL
@@ -45,3 +45,26 @@ cacheSolve <- function(x, ...) {
 
     inv
 }
+
+Code checked on R studio Example: 
+
+source("cachematrix.R")
+
+A <- matrix(c(1,2,3,4), 2, 2)
+
+m <- makeCacheMatrix(A)
+
+cacheSolve(m)
+
+cacheSolve(m)
+
+Result:
+    [,1] [,2]
+[1,]   -2  1.5
+[2,]    1 -0.5
+> 
+> cacheSolve(m)
+getting cached inverse
+     [,1] [,2]
+[1,]   -2  1.5
+[2,]    1 -0.5
